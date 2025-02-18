@@ -6,8 +6,13 @@ const read= async()=>{
 }
 
 const write= async()=>{
+    try{
     const data =  await fspromise.writeFile("./data2.txt", "my name is sakshi dahiya","utf-8");
     console.log(data);
+    }
+    catch(error){
+        console.log(error.msg)
+    }
 }
 
 
